@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(rgb(10, 11, 25, 100%), rgb(28, 18, 55, 100%));
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100vh;
+    margin:0;
+    padding:0
+}
+header{
+    padding: 53px 0px;
+    width: 100%;;
+    display: flex;
+    position: fixed;
+    transition: 0.5s;
+    justify-content: center;
+}
+header .nav-wrap{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 1600px;
+    align-items: center;
+}
+header.white{
+    padding: 20px 0px;
+    background-color: white;
+}
+
+.logo{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.logo.white{
+    color: black;
+}
+header .navbar{
+    display: flex;
+    gap: 116px;
+    z-index: 99;
+    transition: 1s;
+}
+header .navbar a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: light;
+    font-size: 18.82px;
+    padding: 0px 10px;
+}
+
+header .navbar a.white{
+    color: black;
+    z-index: 99;
+}
+header .navbar a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    transition: 200ms;
+    z-index: 99;
+}
+header .navbar a:hover{
+    color: rgb(10, 11, 25, 100%);
+}
+header .navbar a.white:hover{
+    color: white;
+}
+header .navbar a:hover::before{
+    width: 100%;
+    height: 100%;
+    border-width: 0.5px;
+    background-color: white;
+    z-index: -1;
+}
+header .navbar a.white:hover::before{
+    background-color: black;
+    z-index: -1;
+}
+
+header .nav-wrap .detach-navbar{
+    visibility: hidden;
+}
+.bar{
+    visibility: hidden;
+    
+    right: 0;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 214px;
+    gap: 256px;
+}
+.container .content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 280px;
+}
+
+
+.container .content .wrap-img .detach{
+    position: absolute;
+    translate: -20px -30px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0px 100px 0px 100px;
+    border-width: 5px;
+    width: 418px;
+    height: 411px;
+    z-index: -1;
+    background-color: white;
+}
+
+.container .content .wrap-img .detach-hovering:hover{
+    opacity: 1;
+}
+.container .content .wrap-img:hover{
+    cursor: pointer;
+}
+.container .content img{
+    border-style: solid;
+    border-color: white;
+    border-radius: 0px 100px 0px 100px;
+    border-width: 5px;
+    background-color: rgb(10, 11, 25, 100%);
+    width: 418px;
+    height: 411px;
+    object-fit: cover;
+    object-position: 100% 70%;
+}
+
+.container .content .wrap-text{
+    color: white;
+}
+.container .content .wrap-text h1{
+    font-size: 40px;
+    transition: .3s;
+}
+.container .content .wrap-text h1:hover{
+    filter: drop-shadow(white 0px 0px 2px);
+    cursor: pointer;
+}
+.container .content .wrap-text h2{
+    color: white;
+    display: inline-block;
+}
+.container .content .wrap-text h2 span{
+    color: white;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 10s steps(16),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50% { border-color: transparent }
+}
+
+@keyframes typing{
+    from { width: 0 }
+}
+
+.container .content .wrap-text p{
+    font-weight: light;
+    width: 420px;
+    font-size: 17px;
+}
+.container .content .wrap-text .cv{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.container .content .wrap-text .cv a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 18px 25px;
+    border-radius: 36px;
+    transition: 200ms;
+}
+.container .content .wrap-text .cv a:hover{
+    color: white;
+    padding: 18px 25px;
+    background-color: #E2B686;
+    border-style: none;
+}
+.container .content .wrap-text .cv #diff-a{
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 18px 25px;
+    transition: 200ms;
+}
+.container .content .wrap-text .cv #diff-a:hover{
+    color: #E2B686;
+}
+
+.container .about{
+    display: flex;
+    justify-content: center;
+}
+.container .about .wrap-about{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 980px;
+    margin-top: 50px;
+    gap: 100px;
+    padding: 0px 100px;
+}
+.container .about .wrap-about .wrap-about-image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    object-fit: cover;
+}
+.container .about .wrap-about .wrap-about-image .detach-circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(10, 11, 25, 100%);
+}
+.container .about .wrap-about .wrap-text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-text{
+    text-align: start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-text label{
+    font-size: 15px;
+    font-weight: 900;
+    color: rgb(10, 11, 25, 100%);
+    background-color: white;
+    padding: 10px 15px; 
+    border-radius: 40px;
+    width: 100px;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-text p{
+    color: white;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-text p a{
+    text-decoration: none;
+    color: #E2B686; 
+    font-weight: bold;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-text p a:hover{
+    color: gray;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-detail{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-detail .wrap-about-info{
+    display: flex;
+    flex-direction: column;
+    color: #d9d9d9;
+}
+.container .about .wrap-about .wrap-text-content .wrap-about-detail .wrap-about-info label{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.skill label{
+    color: white;
+    font-weight: bold;
+}
+
+.skill img{
+    width: 50px;
+}
+
+
+.container .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container .project label{
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.container .project .wrap-project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    border-style: solid;
+    border-color: white;
+    width: 600px;
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.container .project .wrap-project:hover{
+    filter: drop-shadow(white 0px 0px 2px);
+}
+.container .project .wrap-project img{
+    width: 150px;
+}
+.container .project .wrap-project .wrap-project-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.container .project .wrap-project .wrap-project-text label{
+    font-weight: bold;
+    font-size: 35px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: -100px;
+}
+.container form label{
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.container form .wrap-feedback{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 23px;
+    gap: 45px;
+}
+.container form .wrap-feedback input{
+    width: 490px;
+    height: 69px;
+    font-size: 26px;
+    padding: 0px 39px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+}
+.container form textarea{
+    width: 1105px;
+    height: 400px;
+    padding: 20px 39px;
+    color: white;
+    font-size: 26px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    
+}
+button{
+    margin-top: 20px;
+    background-color: white;
+    padding: 28px 52px;
+    border-style: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: gray;
+    color: white;
+}
+input:focus{
+    outline: none;   
+}
+
+.container footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 460px;
+    min-width: 380px;
+    background-color: white;
+    color: rgba(17, 20, 53, 100%);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 20px 20px 0px 0px;
+}
+.container footer .wrap-a{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.container footer .wrap-a a{
+    text-decoration: none;
+    color: black;
+}
+.container footer .wrap-a a svg{
+    width: 20px;
+    height: 20px;
+}

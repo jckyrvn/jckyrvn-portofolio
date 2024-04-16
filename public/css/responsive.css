@@ -1,0 +1,128 @@
+@media only screen and (max-width: 1200px){
+    
+
+
+    header .navbar{
+        display: none;
+    }
+
+    header .nav-wrap{
+        min-width: 20%;
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+    }
+    header .nav-wrap .detach-navbar{
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        height: 150%;
+        visibility: visible;
+        justify-content: space-between;
+    }
+    header .nav-wrap .detach-navbar:hover{
+        cursor: pointer;
+    }
+    header .nav-wrap .detach-navbar .detach-1{
+        width: 100%;
+        height: 10%;
+        background-color: white;
+    }
+    header .nav-wrap .detach-navbar .detach-1.white{
+        background-color: black;
+    }
+
+    .bar{
+        background-color: white;
+        position: fixed;
+        visibility: visible;
+        width: 200px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .bar svg{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    .bar svg:hover{
+        cursor:pointer;
+    }
+    .bar .nav-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        
+    }
+    .bar .nav-bar a{
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+
+    .container .about .wrap-about{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+    }
+    .container .about .wrap-about .wrap-text-content .wrap-about-detail{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .container .content{
+        flex-direction: column;
+    }
+
+    .container form .wrap-feedback input{
+        width: 185px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .container form textarea{
+        width: 500px;
+        height: 200px;
+        font-size: 18px;
+    }
+    button{
+        padding: 18px 42px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 815px){
+    .skill{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    .container .project .wrap-project{
+        width: 380px;
+    }
+    .container form .wrap-feedback input{
+        padding: 6px 20px;
+        width: 125px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .container form textarea{
+        width: 300px;
+        height: 100px;
+        font-size: 12px;
+    }
+    button{
+        padding: 18px 42px;
+        font-size: 18px;
+    }
+
+}
